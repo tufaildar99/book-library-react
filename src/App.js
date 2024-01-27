@@ -5,6 +5,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
+
       <BookList />
       <Footer />
     </div>
@@ -26,7 +27,7 @@ function BookList() {
         <div className="search-bar">
           <input type="text" placeholder="Search.." />
           <button type="submit">
-            <i class="fa fa-search"></i>
+            <i className="fa fa-search"></i>
           </button>
         </div>
         <div className="book-list-left-all">
@@ -40,6 +41,7 @@ function BookList() {
             <option>Title</option>
             <option>Author</option>
           </select>
+          <AddBook />
         </div>
       </div>
 
@@ -62,8 +64,14 @@ function BookDetail() {
         <h5>Year: 2010</h5>
       </div>
       <div className="book-detail-actions">
-        <button>Edit</button>
-        <button>Delete</button>
+        <div>
+          <button>
+            <i className="fas fa-pencil-alt"></i>
+          </button>
+          <button>
+            <i className="fas fa-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -93,8 +101,6 @@ function AddBookForm() {
   return (
     <div className="add-book-main">
       <form className="add-book-form">
-        <label>Upload Image</label>
-        <input type="file" name="img"></input>
         <label>Title</label>
         <input type="text"></input>
         <label>Author</label>
@@ -105,6 +111,8 @@ function AddBookForm() {
         <input type="text"></input>
         <label>Description</label>
         <textarea type="text"></textarea>
+        <label>Upload Image</label>
+        <input type="file" name="img"></input>
         <div className="add-book-form-buttons">
           <button>Add</button>
           <button>Cancel</button>

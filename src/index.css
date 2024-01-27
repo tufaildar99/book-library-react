@@ -16,7 +16,7 @@ body {
 
 .header {
   color: rgb(10, 10, 10);
-  padding: 20px;
+  padding: 8px;
   text-align: center;
   width: 100%;
   max-width: 1200px;
@@ -42,21 +42,21 @@ body {
   margin-bottom: 20px;
 }
 
-input[type="text"] {
-  flex-grow: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-button {
+.search-bar button {
   background-color: #3498db;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .Book {
@@ -103,16 +103,6 @@ button {
   text-align: left;
 }
 
-.book-detail-actions button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
 footer {
   background-color: #34495e;
   color: white;
@@ -120,4 +110,134 @@ footer {
   padding: 20px;
   margin-top: auto;
   width: 100%;
+}
+
+/*----------------------*/
+.add-book-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book-form {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.add-book-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-book-form input[type="text"],
+.add-book-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-book-form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-book-form-buttons button {
+  width: 45%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.add-book-form-buttons button:first-child {
+  background-color: #3498db;
+  color: white;
+}
+
+.add-book-form-buttons button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/*-------------*/
+.book-sort {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+.book-sort label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.book-sort select {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #495057;
+}
+
+/*------------------*/
+.add-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.add-book button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-book button:hover {
+  background-color: #2980b9;
+}
+
+/*-------------------*/
+.book-detail-actions button {
+  padding: 10px;
+
+  color: #c02222;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.book-detail-actions button:last-child {
+  margin-right: 0;
+}
+
+.book-detail-actions button:hover {
+  background-color: #fb9191;
+}
+
+.book-detail-actions i {
+  font-size: 16px;
 }
