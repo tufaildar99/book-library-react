@@ -66,6 +66,7 @@ input[type="text"] {
   padding: 20px;
   display: flex;
   align-items: center;
+  cursor: pointer; /* Added cursor property */
 }
 
 .book-image {
@@ -240,4 +241,39 @@ footer {
 
 .book-detail-actions i {
   font-size: 16px;
+}
+
+/*-----------------------*/
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.landing-page h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.landing-page p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+.landing-page button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-page button:hover {
+  background-color: #2980b9;
 }
